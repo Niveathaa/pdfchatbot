@@ -78,11 +78,12 @@ DOCUMENT_VECTOR_DB = InMemoryVectorStore(EMBEDDING_MODEL)
 LANGUAGE_MODEL = OllamaLLM(model="deepseek-r1:1.5b")
 
 
-def save_uploaded_file(uploaded_file):
-    file_path = PDF_STORAGE_PATH + uploaded_file.name
-    with open(file_path, "wb") as file:
-        file.write(uploaded_file.getbuffer())
-    return file_path
+#def save_uploaded_file(uploaded_file):
+ #   file_path = PDF_STORAGE_PATH + uploaded_file.name
+  #  with open(file_path, "wb") as file:
+   #     file.write(uploaded_file.getbuffer())
+   #return file_path
+
 
 def load_pdf_documents(file_path):
     document_loader = PDFPlumberLoader(file_path)
